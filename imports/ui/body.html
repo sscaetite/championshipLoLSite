@@ -1,50 +1,97 @@
 <body>
 	<div class="jumbotron text-center bg-primary">
+
+		{{> modalForm}}
 		<p class="text-white display-3">Equipes</p>
-		<p><h1 class="text-white-50">Times inscritos no campeonato</h1></p>
+		<p>
+			<h1 class="text-white-50">Times inscritos no campeonato</h1>
+		</p>
 	</div>
 
 	<div class="container">
 		<div class="container d-flex flex-wrap">
-			{{#each equipes}}
-				{{> equipe}}
+			{{#each equipes}} 
+				{{> equipe}} 
 			{{/each}}
-		</div>	
+		</div>
 	</div>
 </body>
+
+<template name="modalForm">
+	<!-- Botão ativar Modal Criar Equipe-->
+	<button type="button" class="btn btn-allert" data-toggle="modal" data-target="#exampleModalCenter">
+			Adicionar equipe
+		</button>
+
+		<!-- Modal Criar Equipe -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Adicionar equipe</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body nova-inscricao-equipe">
+						<form class="inscEquipe"> <!--
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+								<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>-->
+							<input class="form-control" type="text" name="nome" placeholder="Nome da equipe"> <br>
+							<input class="form-control" type="text" name="capitao" placeholder="Capitão (nick)"> <br>
+							<input class="form-control" type="text" name="top" placeholder="Top (nick)"> <br>
+							<input class="form-control" type="text" name="jungler" placeholder="Jungler (nick)"> <br>
+							<input class="form-control" type="text" name="mid" placeholder="Mid (nick)"> <br>
+							<input class="form-control" type="text" name="adc" placeholder="AD Carry (nick)"> <br>
+							<input class="form-control" type="text" name="supp" placeholder="Support (nick)"> <br>
+							<button type="submit" class="btn btn-primary inscEquipe">Submit</button> 
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+</template>
 
 <template name="equipe">
 	<div class="container col-4">
 		<table class="table table-striped">
 			<thead class="thead-dark">
-				<tr>
+				<tr class="text-center">
 					<th scope="col" colspan="2">{{nome}}</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<th scope="row">Capitão</th>
-					<td>{{capitao}}</td>
+					<td class="text-right">{{capitao}}</td>
 				</tr>
 				<tr>
 					<th scope="row">Top</th>
-					<td>{{top}}</td>
+					<td class="text-right">{{top}}</td>
 				</tr>
 				<tr>
 					<th scope="row">Jungler</th>
-					<td>{{jungler}}</td>
+					<td class="text-right">{{jungler}}</td>
 				</tr>
 				<tr>
 					<th scope="row">Mid</th>
-					<td>{{mid}}</td>
+					<td class="text-right">{{mid}}</td>
 				</tr>
 				<tr>
 					<th scope="row">AD Carry</th>
-					<td>{{adc}}</td>
+					<td class="text-right">{{adc}}</td>
 				</tr>
 				<tr>
 					<th scope="row">Support</th>
-					<td>{{supp}}</td>
+					<td class="text-right">{{supp}}</td>
 				</tr>
 			</tbody>
 		</table>
