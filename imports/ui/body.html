@@ -1,0 +1,52 @@
+<body>
+	<div class="jumbotron text-center bg-primary">
+		<p class="text-white display-3">Equipes</p>
+		<p><h1 class="text-white-50">Times inscritos no campeonato</h1></p>
+	</div>
+
+	<div class="container">
+		<div class="container d-flex flex-wrap">
+			{{#each equipes}}
+				{{> equipe}}
+			{{/each}}
+		</div>	
+	</div>
+</body>
+
+<template name="equipe">
+	<div class="container col-4">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="2">{{nome}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Capitão</th>
+					<td>{{capitao}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Top</th>
+					<td>{{top}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Jungler</th>
+					<td>{{jungler}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Mid</th>
+					<td>{{mid}}</td>
+				</tr>
+				<tr>
+					<th scope="row">AD Carry</th>
+					<td>{{adc}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Support</th>
+					<td>{{supp}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</template>
