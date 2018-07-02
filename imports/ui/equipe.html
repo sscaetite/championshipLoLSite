@@ -1,0 +1,42 @@
+<template name="equipe">
+	<div class="container col-4">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr class="text-center">
+					<th scope="col" colspan="2">
+						{{nome}}
+						<button type="button" class="btn btn-danger btn-sm del-equipe">
+							&times;
+						</button>					
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Capitão</th>
+					<td class="text-right">{{capitao}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Top</th>
+					<td class="text-right">{{top}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Jungler</th>
+					<td class="text-right">{{jungler}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Mid</th>
+					<td class="text-right">{{mid}}</td>
+				</tr>
+				<tr>
+					<th scope="row">AD Carry</th>
+					<td class="text-right">{{adc}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Support</th>
+					<td class="text-right">{{supp}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</template>

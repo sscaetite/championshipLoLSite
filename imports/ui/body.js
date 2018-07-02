@@ -3,6 +3,7 @@ import { Template } from 'meteor/templating';
 import { Equipes } from '../api/equipes.js';
  
 import './body.html';
+import './equipe.html';
  
 Template.body.helpers({
   equipes() {
