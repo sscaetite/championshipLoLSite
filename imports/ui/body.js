@@ -1,10 +1,11 @@
 import { Template } from 'meteor/templating';
- 
+
 import { Equipes } from '../api/equipes.js';
- 
+
 import './body.html';
 import './equipe.js';
- 
+import './editar_equipe.js';
+
 Template.body.helpers({
   equipes() {
     return Equipes.find({});
@@ -44,6 +45,22 @@ Template.body.events({
     target.mid.value = '';
     target.adc.value = '';
     target.supp.value = '';
-    
+
   },
+
+  'submit .novoNomeEquipe'(event) {
+    event.preventDefault();
+
+    const targget = event.target;
+    const novoNome = targget.nome.value;
+
+    console.log(novoNome);
+
+    Equipes.update(this._id, {
+      $set: { nome: novoNome },
+    });
+
+    targget.nome.value = '';
+  },
+
 });

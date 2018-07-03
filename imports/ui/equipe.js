@@ -1,9 +1,9 @@
 import { Template } from 'meteor/templating';
-import { Mongo } from 'meteor/mongo';
  
 import { Equipes } from '../api/equipes.js';
  
 import './equipe.html';
+import './editar_equipe.html';
  
 Template.equipe.events({
   'click #remover-equipe'() {
