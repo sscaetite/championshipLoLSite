@@ -20,3 +20,7 @@ insecure
 alexwine:bootstrap-4
 autopublish
 fortawesome:fontawesome
+iron:router
+accounts-ui
+accounts-password
+reactive-dict
