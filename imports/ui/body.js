@@ -54,8 +54,6 @@ Template.body.events({
     const targget = event.target;
     const novoNome = targget.nome.value;
 
-    console.log(novoNome);
-
     Equipes.update(this._id, {
       $set: { nome: novoNome },
     });

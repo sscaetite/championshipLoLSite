@@ -1,18 +1,19 @@
 <body>
 	<div class="jumbotron text-center bg-primary">
 
-		{{> modalForm}}
 		<p class="text-white display-3">Equipes</p>
 		<p>
 			<h1 class="text-white-50">Times inscritos no campeonato</h1>
 		</p>
+
+		{{> modalForm}}
 	</div>
 
-	
+
 	<div class="container">
 		<div class="container d-flex flex-wrap">
-			{{#each equipes}} 
-				{{> equipe}} 
+			{{#each equipes}}
+				{{> equipe}}
 			{{/each}}
 		</div>
 	</div>
@@ -20,8 +21,8 @@
 
 <template name="modalForm">
 	<!-- Botão ativar Modal Criar Equipe-->
-	<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#inscreverNovaEquipe">
-		Adicionar equipe
+	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#inscreverNovaEquipe">
+		<i class="fa fa-plus"></i>  Adicionar equipe
 	</button>
 
 	<!-- Modal Criar Equipe -->
@@ -31,12 +32,14 @@
 				<div class="modal-header">
 					<h5 class="modal-title">Adicionar equipe</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"><i class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+						<span aria-hidden="true">
+							<i class="fa fa-times-circle-o" aria-hidden="true"></i>
+						</span>
 					</button>
 				</div>
 				<div class="modal-body nova-inscricao-equipe">
 					<form class="inscEquipe">
-						<input class="form-control" type="text" name="nome" placeholder="Nome da equipe" required><br>						
+						<input class="form-control" type="text" name="nome" placeholder="Nome da equipe" required><br>
 						<input class="form-control" type="text" name="capitao" placeholder="Capitão (nick)" required><br>
 						<input class="form-control" type="text" name="top" placeholder="Top (nick)" required><br>
 						<input class="form-control" type="text" name="jungler" placeholder="Jungler (nick)" required><br>
@@ -53,4 +56,3 @@
 		</div>
 	</div>
 </template>
-
