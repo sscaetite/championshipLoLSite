@@ -22,6 +22,7 @@ autopublish
 fortawesome:fontawesome
 iron:router
 accounts-ui
-accounts-password
 reactive-dict
-aldeed:collection2
+aldeed:collection2@3.0.0
+npm-bcrypt
+accounts-password

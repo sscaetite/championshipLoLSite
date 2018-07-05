@@ -1,3 +1,3 @@
 Router.route('/', function () {
-    this.render('main');
-  });
+  this.render('main');
+});
