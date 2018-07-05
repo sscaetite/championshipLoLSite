@@ -21,8 +21,6 @@ alexwine:bootstrap-4
 autopublish
 fortawesome:fontawesome
 iron:router
-accounts-ui
 reactive-dict
 aldeed:collection2@3.0.0
 npm-bcrypt
-accounts-password
