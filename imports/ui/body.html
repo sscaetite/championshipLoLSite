@@ -1,23 +1,25 @@
-<body>
-	<div class="jumbotron text-center bg-primary">
 
-		<p class="text-white display-3">Equipes</p>
-		<p>
-			<h1 class="text-white-50">Times inscritos no campeonato</h1>
-		</p>
+	<body>
+		<div class="jumbotron text-center bg-primary">
 
-		{{> modalForm}}
-	</div>
+			<p class="text-white display-3">Equipes</p>
+			<p>
+				<h1 class="text-white-50">Times inscritos no campeonato</h1>
+			</p>
 
-
-	<div class="container">
-		<div class="container d-flex flex-wrap">
-			{{#each equipes}}
-				{{> equipe}}
-			{{/each}}
+			{{> modalForm}}
 		</div>
-	</div>
-</body>
+
+
+		<div class="container">
+			<div class="container d-flex flex-wrap">
+				{{#each equipes}}
+					{{> equipe}}
+				{{/each}}
+			</div>
+		</div>
+	</body>
+
 
 <template name="modalForm">
 	<!-- Botão ativar Modal Criar Equipe-->
